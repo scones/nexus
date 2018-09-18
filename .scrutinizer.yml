@@ -1,12 +1,3 @@
-build:
-  nodes:
-    coverage:
-      tests:
-        override:
-          - command: ./run-my-tests
-            coverage:
-              file: target/coverage.xml
-              format: clover
 filter:
   excluded_paths: [tests/*]
 

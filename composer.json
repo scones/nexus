@@ -3,7 +3,7 @@
     "description": "implementation for the upcoming PSR-14 standard. currently supporting 0.4.0",
     "type": "library",
     "homepage": "https://github.com/scones/nexus",
-    "license": "https://github.com/scones/nexus/blob/master/LICENSE",
+    "license": "MIT",
     "keywords": ["psr", "psr-14", "events", "event dispatcher", "tasks"],
     "repositories": [
         {

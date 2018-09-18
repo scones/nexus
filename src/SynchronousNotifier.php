@@ -20,7 +20,7 @@ class SynchronousNotifier implements MessageNotifierInterface
     public function notify(MessageInterface $event): void
     {
         foreach ($this->listenerProvider->getListenersForEvent($event) as $listener) {
-            call_user_func($listener, $event);
+            call_user_func($listener, clone$event);
         }
     }
 }

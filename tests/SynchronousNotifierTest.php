@@ -33,6 +33,10 @@ class SynchronousNotifierTest extends TestCase
         $this->listenerFourEventTypeThree = function (TestTaskClassTwo $someOtherTask) {
             $this->listenerFourCount++;
         };
+        $this->listenerFiveEventTypeTwo = function (TestMessageClassTwo $someMessage) {
+        };
+        $this->listenerSixEventTypeTwo = function (TestMessageClassTwo $someMessage) {
+        };
     }
 
     public function tearDown()
@@ -53,5 +57,18 @@ class SynchronousNotifierTest extends TestCase
         $this->assertEquals(1, $this->listenerTwoCount);
         $this->assertEquals(0, $this->listenerThreeCount);
         $this->assertEquals(0, $this->listenerFourCount);
+    }
+
+    public function testNotifierShouldProvideImmutableMessages()
+    {
+        $this->provider->addListener($this->listenerOneEventTypeOne);
+        $this->provider->addListener($this->listenerTwoEventTypeOne);
+        $this->provider->addListener($this->listenerFiveEventTypeTwo);
+        $this->provider->addListener($this->listenerSixEventTypeTwo);
+
+        $testEvent = new TestMessageClassTwo();
+        $this->notifier->notify($testEvent);
+
+        $this->addToAssertionCount(1);
     }
 }

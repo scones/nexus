@@ -1,0 +1,41 @@
+{
+    "name": "PSR-14 event dispatcher implementation",
+    "description": "implementation for the upcoming PSR-14 standard. currently supporting 0.4.0",
+    "type": "library",
+    "homepage": "https://github.com/scones/nexus",
+    "license": "https://github.com/scones/nexus/blob/master/LICENSE",
+    "keywords": ["psr", "psr-14", "events", "event dispatcher", "tasks"],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:php-fig/event-dispatcher.git"
+        }
+    ],
+    "require": {
+        "php": "~7.2",
+        "psr/event-dispatcher": "^0.4.0"
+    },
+    "provide": {
+        "psr/event-dispatcher-implementation": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*@stable",
+        "sebastian/phpcpd": "*@stable",
+        "phpmd/phpmd" : "*@stable",
+        "sebastian/phpcpd": "*@stable",
+        "phploc/phploc": "*@stable"
+    },
+    "platform": {
+        "php": "~7.2"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nexus\\Tests\\": "tests/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Nexus\\": "src/"
+        }
+    }
+}

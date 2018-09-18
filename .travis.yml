@@ -5,4 +5,4 @@ php:
 
 before_script:
   - composer self-update
-  - composer --prefer-source --dev install
+  - composer --prefer-dist --dev install

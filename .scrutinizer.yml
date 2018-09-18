@@ -1,9 +1,9 @@
 build:
   nodes:
-    coverage:
+    coverage-tests:
       tests:
         override:
-          - command: ./my-test-run
+          - command: phpunit --coverage-clover=coverage.xml
             coverage:
-              file: path/to/coverage-data
-              format: clover
+              file: coverage.xml
+              format: php-clover

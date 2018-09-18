@@ -1,5 +1,5 @@
 {
-    "name": "PSR-14 event dispatcher implementation",
+    "name": "scones/nexus",
     "description": "implementation for the upcoming PSR-14 standard. currently supporting 0.4.0",
     "type": "library",
     "homepage": "https://github.com/scones/nexus",

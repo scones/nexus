@@ -3,7 +3,7 @@ build:
     coverage-tests:
       tests:
         override:
-          - command: phpunit --coverage-clover=/tmp/coverage.xml
+          - command: ./vendor/bin/phpunit --coverage-clover=/tmp/coverage.xml
             coverage:
               file: /tmp/coverage.xml
               format: php-clover

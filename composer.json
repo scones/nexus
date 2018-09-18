@@ -22,7 +22,6 @@
         "phpunit/phpunit": "*@stable",
         "sebastian/phpcpd": "*@stable",
         "phpmd/phpmd" : "*@stable",
-        "sebastian/phpcpd": "*@stable",
         "phploc/phploc": "*@stable"
     },
     "platform": {

@@ -11,7 +11,7 @@ psr-14 event dispatcher implementation
 
 In most cases it should suffice to just install it via composer.
 
-`composer require middlewares/whoops "*@stable"`
+`composer require scones/nexus "*@stable"`
 
 ## Usage
 

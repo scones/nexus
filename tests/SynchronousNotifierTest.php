@@ -71,4 +71,29 @@ class SynchronousNotifierTest extends TestCase
 
         $this->addToAssertionCount(1);
     }
+
+    public function testNotifierShouldPreventExceptionToStopOtherListeners()
+    {
+        $counter = 0;
+        $this->provider->addListener(function (TestMessageClassTwo $message) {
+            throw new \RuntimeException("some failure");
+        });
+        $this->provider->addListener(function (TestMessageClassTwo $message) use (&$counter) {
+            $counter += 1;
+        });
+        $this->provider->addListener(function (TestMessageClassTwo $message) {
+            throw new \RuntimeException("some failure");
+        });
+        $this->provider->addListener(function (TestMessageClassTwo $message) use (&$counter) {
+            $counter += 4;
+        });
+        $this->provider->addListener(function (TestMessageClassTwo $message) {
+            throw new \RuntimeException("some failure");
+        });
+
+        $testEvent = new TestMessageClassTwo();
+        $this->notifier->notify($testEvent);
+
+        $this->assertEquals(5, $counter);
+    }
 }

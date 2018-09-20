@@ -26,7 +26,7 @@ class SynchronousProcessor implements TaskProcessorInterface
             if (!is_object($task) || !($task instanceof TaskInterface)) {
                 throw new TaskResultViolation();
             }
-            if ($task instanceof StoppableTaskInterface && $task->isStopped()) {
+            if ($task instanceof StoppableTaskInterface && $task->isPropagationStopped()) {
                 break;
             }
         }

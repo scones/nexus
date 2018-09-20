@@ -28,7 +28,7 @@ class TestTaskClassTwo implements StoppableTaskInterface
         return $this;
     }
 
-    public function isStopped(): bool
+    public function isPropagationStopped(): bool
     {
         return $this->isPropagationStopped;
     }

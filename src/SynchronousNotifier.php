@@ -23,6 +23,7 @@ class SynchronousNotifier implements MessageNotifierInterface
             try {
                 call_user_func($listener, clone$event);
             } catch (\Exception $e) {
+                // just prevent this exception from affecting the other messages by catching it quietly
             }
         }
     }

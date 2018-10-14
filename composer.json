@@ -1,6 +1,6 @@
 {
     "name": "scones/nexus",
-    "description": "implementation for the upcoming PSR-14 standard. currently supporting 0.5.0",
+    "description": "implementation for the upcoming PSR-14 standard. currently supporting 0.6.0",
     "type": "library",
     "homepage": "https://github.com/scones/nexus",
     "license": "MIT",
@@ -13,7 +13,9 @@
     ],
     "require": {
         "php": "~7.2",
-        "psr/event-dispatcher": "^0.5.0"
+        "psr/event-dispatcher": "^0.6.0",
+        "psr/event-dispatcher-message": "^0.6.0",
+        "psr/event-dispatcher-task": "^0.6.0"
     },
     "provide": {
         "psr/event-dispatcher-implementation": "^1.0"

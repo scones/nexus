@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class SynchronousNotifierTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->provider = new StandardListenerProvider();
         $this->notifier = new SynchronousNotifier($this->provider);
@@ -39,7 +39,7 @@ class SynchronousNotifierTest extends TestCase
         };
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->notifier);
         unset($this->provider);

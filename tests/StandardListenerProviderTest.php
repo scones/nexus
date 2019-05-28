@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class StandardListenerProviderTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->provider = new StandardListenerProvider();
         $this->listenerOneEventTypeOne = function (TestMessageClassOne $someMessage) {
@@ -22,7 +22,7 @@ class StandardListenerProviderTest extends TestCase
         };
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->provider);
     }

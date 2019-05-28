@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class SynchronousProcessorTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->provider = new StandardListenerProvider();
         $this->processor = new SynchronousProcessor($this->provider);
@@ -45,7 +45,7 @@ class SynchronousProcessorTest extends TestCase
         };
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->processor);
         unset($this->provider);

@@ -9,11 +9,19 @@
         {
             "type": "git",
             "url": "https://github.com/php-fig/event-dispatcher.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/scones/event-dispatcher-task.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/scones/event-dispatcher-message.git"
         }
     ],
     "require": {
         "php": "~7.2",
-        "psr/event-dispatcher": "^0.6.0",
+        "psr/event-dispatcher": "^0.6.0, <1.0.0",
         "psr/event-dispatcher-message": "^0.6.0",
         "psr/event-dispatcher-task": "^0.6.0"
     },
